@@ -41,14 +41,14 @@ while flag<=100:
         if os.path.exists(str(t))==False:
             try:
                 os.makedirs(str(t))
-                print('开始下载:'+str(t))
+                print('Start downloading:'+str(t))
                 download_img(str(img_url[0]),str(t))
                 download_mp4(str(video_url[0]),str(t))
-                print('下载完成')
+                print('completed')
             except:
                 pass
         else:
-            print('已存在文件夹,跳过')
+            print('Already existing folders, skip')
             time.sleep(2)
     flag=flag+1
-    print('此页已下载完成，下一页是'+str(flag))
+    print('This page has been downloaded and the next page is'+str(flag))
